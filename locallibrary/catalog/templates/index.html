@@ -1,0 +1,26 @@
+<!--изменённая разметка-->
+
+{% extends "base_generic.html" %}
+
+{% block title %}My Local Library{% endblock %}
+
+{% block content %}
+<h1>Главная страница библиотеки</h1>
+
+<p> В библиотеке имеется следующее</p>
+
+
+<ul>
+  <li><strong>Книги:</strong> {{ num_books }}</li>
+  <li><strong>Копии:</strong> {{ num_instances }}</li>
+  <li><strong>Авторы:</strong> {{ num_authors }}</li>
+  <li><strong>Жанры:</strong> {{ num_genres }}</li> <!-- Добавлено новое значение -->
+</ul>
+<p>
+  You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{%
+  else %} times{% endif %}.
+</p>
+{% endblock %}
+
+
+
